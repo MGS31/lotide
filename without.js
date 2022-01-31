@@ -23,21 +23,21 @@ const assertArraysEqual = (actual, expected) => {
 
 const without = (arr1, itemsToRemove) => {
   let newArr = [];
-  for (let y = 0; y < arr1.length; y++){
-    newArr.push(arr1[y]);
+  for (let y = 0; y < arr1.length; y++) {
+    newArr.push(arr1 [y]);
   }
   for (let i = 0; i < newArr.length; i++) {
     for (let j = 0; j < itemsToRemove.length; j++) {
       if (newArr[i] === itemsToRemove[j]) {
-        newArr.splice([i], 1); 
+        newArr.splice([i], 1);
       }
-    } 
+    }
   }
   return newArr;
 };
 
-without([1, 2, 3], [1]) // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
+without([1, 2, 3], [1]); // => [2, 3]
+without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
 
-assertArraysEqual((without([1, 2, 3], [1])), [2,3]) // => True
-assertArraysEqual((without(["1", "2", "3"], [1, 2, "3"])), [1, 2]) // => False
+assertArraysEqual((without([1, 2, 3], [1])), [2,3]); // => True
+assertArraysEqual((without(["1", "2", "3"], [1, 2, "3"])), [1, 2]); // => False

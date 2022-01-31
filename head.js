@@ -1,11 +1,11 @@
 const assertEqual = (actual, expected) => {
   return actual === expected ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
-  : console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected} `);
- };
+    : console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected} `);
+};
 
 const head = function(array) {
   if (array !== []) {
-  return array[0];
+    return array[0];
   } else {
     return "undefined";
   }

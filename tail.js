@@ -1,7 +1,7 @@
 const assertEqual = (actual, expected) => {
   return actual === expected ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
-  : console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected} `);
- };
+    : console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected} `);
+};
 
 const tail = (array) => {
   const sum = array.slice(1);
