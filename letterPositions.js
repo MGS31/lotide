@@ -17,20 +17,21 @@ const assertArraysEqual = (actual, expected) => {
 };
 
 
-// loop through the sentance
+// loop through the sentence
 // return each letter in the string as a key in the results object
 // for each key input an array that counts the indecs of the corrisponding key
 // return results
 
-const letterPositions = (sentance) => {
+const letterPositions = (sentence) => {
   const results = {};
-  for (let i = 0; i < sentance.length; i++) {
-    if (results[sentance[i]]) {
-      results[sentance[i]].push(...[i]);
-    } else if (results[sentance[i]] !== ' ') {
-      results[sentance[i]] = [i];
+  for (let i = 0; i < sentence.length; i++) {
+    if (results[sentence[i]]) {
+      results[sentence[i]].push(...[i]);
+    } else {
+      results[sentence[i]] = [i];
     }
   }
+  delete results[' '];
   return results;
 };
 
@@ -38,7 +39,7 @@ console.log(letterPositions('hello'));
 console.log(letterPositions('lighthouse in the house'));
 const results1 = letterPositions('hello');
 
-//assertArraysEqual(results1["h"], [0]);
-//assertArraysEqual(results1["e"], [1]);
-//assertArraysEqual(results1["l"], [2, 3]);
-//assertArraysEqual(results1[""], [4]);
+assertArraysEqual(results1["h"], [0]);
+assertArraysEqual(results1["e"], [1]);
+assertArraysEqual(results1["l"], [2, 3]);
+assertArraysEqual(results1["o"], [4]);
