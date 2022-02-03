@@ -4,14 +4,12 @@ const assertEqual = (actual, expected) => {
 };
 
 const eqArrays = (actual, expected) => {
-  let isEqual = true;
   for (let i = 0; i < actual.length; i++) {
     if (actual[i] !== expected[i] || actual.length !== expected.length) {
-      isEqual = false;
-      break;
+      return false;
     }
   }
-  return isEqual;
+  return true;
 };
 
 console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
