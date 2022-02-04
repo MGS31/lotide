@@ -27,16 +27,26 @@ const assertArraysEqual = (actual, expected) => {
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 
-const takeUntil = function(array, callback) {
-  for (const [index, values ] of array.entries()) if (callback(values)) return array.slice(0, index);
-  return array;
+// const takeUntil = function(array, callback) {
+//   for (const [index, values ] of array.entries()) if (callback(values)) return array.slice(0, index);
+//   return array;
+// };
+
+const takeUntil1 = function(arr, fun) {
+  for (let i = 0; i < arr.length; i++) {
+    if (fun(arr[i])) {
+      return arr.slice(0, [i]);
+    }
+  }
 };
 
+console.log(takeUntil1(data1, n => n === -1));
+assertArraysEqual(takeUntil1(data2, n => n.length === 1), ["I've", "been", "to", "Hollywood"]);
 
-assertArraysEqual(takeUntil(data1, n => n === -1), [1, 2, 5, 7, 2]);
-assertArraysEqual(takeUntil(data2, n => n.length === 1), ["I've", "been", "to", "Hollywood"]);
-assertArraysEqual(takeUntil(data1, n => n === -1), [1, 2, 5, 7, 2, -1]);
-assertArraysEqual(takeUntil(data2, n => n.length === 1), ["I've", "been", "to", "Hollywood", ","]);
+// assertArraysEqual(takeUntil(data1, n => n === -1), [1, 2, 5, 7, 2]);
+// assertArraysEqual(takeUntil(data2, n => n.length === 1), ["I've", "been", "to", "Hollywood"]);
+// assertArraysEqual(takeUntil(data1, n => n === -1), [1, 2, 5, 7, 2, -1]);
+// assertArraysEqual(takeUntil(data2, n => n.length === 1), ["I've", "been", "to", "Hollywood", ","]);
 
 
 
