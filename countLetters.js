@@ -8,17 +8,24 @@ const assertEqual = (actual, expected) => {
 // for each unique element have it showcase a counter
 
 const countLetters = (words) => {
+  // starting I create an empty object, this will be used to return the information at the end of the function.
   let result = {};
+  // to ensure there are no spaces I used a .trim on the words (input parameter) and removed the spaces from the string.
   let noSpace = words.trim(' ');
+  // next I simply for loop through the string using the noSpace variable and it's length to ensure it checks each part correctly.
   for (let i = 0; i < noSpace.length; i++) {
+    // now an if else starts verifying if the initial index of the noSpace is in the results object. If it is the function adds 1.
     if (result[noSpace[i]]) {
       result[noSpace[i]] += 1;
+      // if its not in the obejct it checks to see if the index is a space, it then returns the result object
     } else if (noSpace[i] === ' ') {
       result[noSpace[i]];
+      // last check is if it's in the object already, if it's not it adds the indexed value of noSpace plus a 1 to the object.
     } else {
       result[noSpace[i]] = 1;
     }
   }
+  // returning the final output. the loop from before will go through all aspects of the code ensuring all parts of the string are added.
   return result;
 };
 
