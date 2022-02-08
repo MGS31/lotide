@@ -18,11 +18,15 @@ const assertEqual = (actual, expected) => {
 // };
 
 const findKeyByValue = function(object, value) {
+  // using a for in loop to bring the keys from the requested object
   for (const key in object) {
+    // now if the value of the specified objects key is equal to the input value
     if (object[key] === value) {
+      // we return the key asscoaited to that value using the for in loop from earlier.
       return key;
     }
   }
+  // if the check returns false return undefined.
   return undefined;
 };
 
