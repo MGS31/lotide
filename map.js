@@ -26,10 +26,15 @@ const words = ["ground", "control", "to", "major", "tom"];
 const num = [ 10, 20, 30, 40, 50 ];
 
 const map = function(array, callback) {
+  // starting with the classic blank array.
   const result = [];
+  // followed by a simple for of loop to specify the different elements of the array.
   for (let item of array) {
+    // a push is used to push the elements to the results array which uses a specified call back function on the item.
+    // the callback function is included within the functions paramaters.
     result.push(callback(item));
   }
+  // results array is returned.
   return result;
 };
 

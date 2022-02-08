@@ -33,8 +33,11 @@ const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Re
 // };
 
 const takeUntil1 = function(arr, fun) {
+  // using a for loop against the length of the array.
   for (let i = 0; i < arr.length; i++) {
+    // we can have a call back function equal a specific point we want to slice from.
     if (fun(arr[i])) {
+      // in doing so we then slice the [0] index to the index that meets the callback functions specifics.
       return arr.slice(0, [i]);
     }
   }

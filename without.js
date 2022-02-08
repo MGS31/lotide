@@ -22,17 +22,26 @@ const assertArraysEqual = (actual, expected) => {
 //New Array should only have those elements from the source that are not present in the itemsToRemove array. --- done
 
 const without = (arr1, itemsToRemove) => {
+  // starting with a blank array
   let newArr = [];
+  // we do a simple for loop on the array being input in the function param.
   for (let y = 0; y < arr1.length; y++) {
+    // we can then push the y index from the input array to the blank array.
     newArr.push(arr1 [y]);
   }
+  //at this point we then need to loop through the values of our newArr as well as the items to remove.
   for (let i = 0; i < newArr.length; i++) {
+    // this looks at the new array looping through each element.
     for (let j = 0; j < itemsToRemove.length; j++) {
+      // this looks at the second array of items to remove.
       if (newArr[i] === itemsToRemove[j]) {
+        // since we are doing a loop of both by the values of the items to remove we can say when they match/
+        // splice from the newArr that index and DON'T add anything back (hence the ([i], 1)).
         newArr.splice([i], 1);
       }
     }
   }
+  // we then retunr the NewArr that was spliced and are therefore not affecting the original array input so we can use the assert Arrays equal as well.
   return newArr;
 };
 
