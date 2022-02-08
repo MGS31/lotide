@@ -17,6 +17,7 @@ const assertEqual = (actual, expected) => {
 //   return undefined;
 // };
 
+// I worked on this code with @rachelpr!
 const findKeyByValue = function(object, value) {
   // using a for in loop to bring the keys from the requested object
   for (const key in object) {

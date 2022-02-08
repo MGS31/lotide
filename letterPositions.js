@@ -29,6 +29,7 @@ const letterPositions = (sentence) => {
   for (let i = 0; i < sentence.length; i++) {
     // if the element of the sentance is already in the new object I had a .push added the index using the spread opperator.
     // the spread opperator is ensuring the correct functionality it happening to remove and nested loops for arrays with multiple index.
+    // I walked through this with @b1u3too to help me understand more and confirm it worked.
     if (results[sentence[i]]) {
       results[sentence[i]].push(...[i]);
     } else {
