@@ -60,7 +60,7 @@ middle([1, 2]); // => []
 middle([1]); // => []
 middle([1, 2, 3, 4, 5, 6, 7, 8]); // => [4, 5]
 
-
+// want to give credit to @lexico4real who helped me sort out my assertArrays tests to ensure they were working! He also helped me refactor my code to be better!
 assertArraysEqual(middle([1, 2, 3]), [2]);
 assertArraysEqual(middle([1, 2, 3, 4, 5]), [4]);
 assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);

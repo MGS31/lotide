@@ -1,3 +1,5 @@
+// adding credit for @matymcleod who helped me work through this problem!! He's a great mentor!
+
 const assertEqual = (actual, expected) => {
   return actual === expected ? console.log(`✅✅✅  Assertion Passed: ${actual} === ${expected}`)
     : console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected}`);
@@ -28,3 +30,5 @@ console.log(eqArrays(["1", "2", "3"], ["1", "2", 3]));// => false
 //    console.log(num1, num2);
 //  })
 //}
+
+

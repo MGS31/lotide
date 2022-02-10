@@ -1,3 +1,5 @@
+// need to credit @GideonBrasil for his excellent help and patiences as a mentor, He did a great job explaining what we were doing as I worked through the code.
+
 const eqArrays = (actual, expected) => {
   for (let i = 0; i < actual.length; i++) {
     if (actual[i] !== expected[i] || actual.length !== expected.length) {

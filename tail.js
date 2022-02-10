@@ -24,3 +24,5 @@ assertEqual(resultTo[1], [2, 1][1]);
 const words = ["Yo Yo", "Lighthouse", "labs"];
 tail(words);
 assertEqual(words.length, 3);
+
+// adding a refernce to the help from @cangoman who assisted as a mentor on this!

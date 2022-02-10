@@ -21,6 +21,8 @@ const assertArraysEqual = (actual, expected) => {
 // push only one instance of each value to a new array
 // return the new array as single array.
 
+// adding credit to @jlabedzki who's patience and help was so wonderful for figuring out this problem!
+
 const flatten = (arr) => {
   // starting with a blank array to return the finished code.
   let newArr = [];

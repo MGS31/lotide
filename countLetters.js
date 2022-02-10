@@ -3,6 +3,9 @@ const assertEqual = (actual, expected) => {
     : console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected}`);
 };
 
+// @nosaoasis was so helpful in walking me through why the specific code from the reading exercise was working. That way I can read and understand exactly what I'm writing!
+
+
 // loop through each element of a string
 // print the unique elements to a object
 // for each unique element have it showcase a counter

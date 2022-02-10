@@ -17,6 +17,9 @@ const assertEqual = (actual, expected) => {
 //   return undefined;
 // };
 
+//@webxteria helped me understand why my loop was breaking and I was able to refactor and complete the assisgnment.
+// he also showed me the Object.entries method to destructure an object and get its values more easily!
+
 // I worked on this code with @rachelpr!
 const findKeyByValue = function(object, value) {
   // using a for in loop to bring the keys from the requested object

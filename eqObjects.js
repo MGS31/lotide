@@ -12,6 +12,10 @@ const eqArrays = (actual, expected) => {
   return true;
 };
 
+// @jcbain I can't thank enough for helping me refactor and walk through my code. He showed me the good and bad from what I
+// had originally written as well as why things were working if we did different process.
+// he also made sure I was the one working through the problem and it helped so much!!
+
 // return true if both objects have identical keys with identical values
 // objects should have the same number of values
 // the value of each key in object1 is the same as the value for that same key in the object2
