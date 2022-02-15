@@ -1,16 +1,6 @@
-const assertEqual = (actual, expected) => {
-  return actual === expected ? console.log(`✅✅✅  Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected}`);
-};
+const assertEqual = require('./assertEqual');
+const eqArrays = require('./eqArrays');
 
-const eqArrays = (actual, expected) => {
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i] || actual.length !== expected.length) {
-      return false;
-    }
-  }
-  return true;
-};
 
 // @jcbain I can't thank enough for helping me refactor and walk through my code. He showed me the good and bad from what I
 // had originally written as well as why things were working if we did different process.
@@ -49,18 +39,4 @@ const eqObject = function(object1, object2) {
   return true;
 };
 
-const ab = { a: "1", b: "2"};
-const ba = { b: "2", a: "1" };
-
-assertEqual(eqObject(ab,ba), true);
-
-const abc = { a: "1" , b: "2" , c: "3" };
-assertEqual(eqObject(ab, abc), false);
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObject(cd, dc), true);
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-
-assertEqual(eqObject(cd, cd2), false);
+module.exports = eqObject;

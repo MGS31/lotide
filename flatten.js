@@ -1,20 +1,6 @@
-const eqArrays = (actual, expected) => {
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i] || actual.length !== expected.length) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
-
-const assertArraysEqual = (actual, expected) => {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅  Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 
 // loop through nested array
 // compare each value of both main and neseted arrays
@@ -43,4 +29,4 @@ const flatten = (arr) => {
   return newArr;
 };
 
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+module.exports = flatten;

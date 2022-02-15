@@ -1,22 +1,6 @@
 // need to credit @GideonBrasil for his excellent help and patiences as a mentor, He did a great job explaining what we were doing as I worked through the code.
-
-const eqArrays = (actual, expected) => {
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i] || actual.length !== expected.length) {
-      return false;
-    }
-  }
-  return true;
-};
-
-
-const assertArraysEqual = (actual, expected) => {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅  Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 //Implement without which will return a subset of a given array, removing unwanted elements. --- done
 //This function should take in a source array and a itemsToRemove array. --- done
@@ -48,9 +32,3 @@ const without = (arr1, itemsToRemove) => {
 };
 
 module.exports = without;
-
-without([1, 2, 3], [1]); // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
-
-assertArraysEqual((without([1, 2, 3], [1])), [2,3]); // => True
-assertArraysEqual((without(["1", "2", "3"], [1, 2, "3"])), [1, 2]); // => False

@@ -1,8 +1,4 @@
-const assertEqual = (actual, expected) => {
-  return actual === expected ? console.log(`✅✅✅  Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected}`);
-};
-
+const assertEqual = require('./assertEqual');
 // @nosaoasis was so helpful in walking me through why the specific code from the reading exercise was working. That way I can read and understand exactly what I'm writing!
 
 
@@ -32,16 +28,4 @@ const countLetters = (words) => {
   return result;
 };
 
-console.log(countLetters("password"));
-console.log(countLetters("Lighthouse Labs House Lights"));
-
-const result1 = countLetters("password");
-
-console.log(result1);
-
-assertEqual(result1["p"], 1);
-assertEqual(result1["w"], 1);
-assertEqual(result1["s"], 2);
-assertEqual(result1["z"], undefined);
-assertEqual(result1["d"], 1);
-assertEqual(result1["a"], 3);
+module.exports = countLetters;
