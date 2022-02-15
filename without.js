@@ -47,6 +47,8 @@ const without = (arr1, itemsToRemove) => {
   return newArr;
 };
 
+module.exports = without;
+
 without([1, 2, 3], [1]); // => [2, 3]
 without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
 
