@@ -1,15 +1,23 @@
-const assertEqual = require('../assertEqual');
 const tail = require('../tail');
+const assert = require('chai').assert;
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result[0], ["Lighthouse", "Labs"][0]);
-assertEqual(result[1], ["Lighthouse", "Labs"][1]);
-assertEqual(result.length, 2);
-
-const resultTo = tail([3, 2, 1]);
-assertEqual(resultTo[0], [2, 1][0]);
-assertEqual(resultTo[1], [2, 1][1]);
-
-const words = ["Yo Yo", "Lighthouse", "labs"];
-tail(words);
-assertEqual(words.length, 3);
+describe('#Tail', () => {
+  it("returns ['Lighthouse', 'Labs'] for ['Hello,'Lighthouse,'Labs']", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
+  });
+  it("returns ['Labs'] for ['Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Lighthouse', 'Labs']), ['Labs']);
+  });
+  it("returns [2, 1] for [3,2,1]", () => {
+    assert.deepEqual(tail([3,2,1]), [2,1]);
+  });
+  it("returns [1] for [2,1]", () => {
+    assert.deepEqual(tail([2,1]), [1]);
+  });
+  it("returns [3,4,5] for [4,5,6,2,3] ", () => {
+    assert.notDeepEqual(tail([4,5,6,2,3]), [3,4,5]);
+  });
+  it("returns 3 for [1,2,3].length", () => {
+    assert.strictEqual([1,2,3].length, 3);
+  })
+});
