@@ -1,9 +1,5 @@
 // adding credit for @matymcleod who helped me work through this problem!! He's a great mentor!
-
-const assertEqual = (actual, expected) => {
-  return actual === expected ? console.log(`✅✅✅  Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected}`);
-};
+const assertEqual = require('./assertEqual');
 
 const eqArrays = (actual, expected) => {
   // simple for loop to go through the expected arrays value
@@ -18,17 +14,6 @@ const eqArrays = (actual, expected) => {
   return true;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
-
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3]));// => false
-
-//const eqArrays = (actual, expected) => {
-//  actual.forEach((num1, index) => {
-//    const num2 = expected[index];
-//    console.log(num1, num2);
-//  })
-//}
+module.exports = eqArrays;
 
 
