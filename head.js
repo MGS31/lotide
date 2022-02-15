@@ -1,7 +1,4 @@
-const assertEqual = (actual, expected) => {
-  return actual === expected ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`⚠️ ⚠️ ⚠️  Assertion Failed: ${actual} !== ${expected} `);
-};
+const assertEqual = require('./assertEqual');
 
 const head = function(array) {
   // run a simple check to see if the ray is not a blank array
@@ -14,8 +11,4 @@ const head = function(array) {
   }
 };
 
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([6,6,7]), 5);
-assertEqual(head([]), 5);
-assertEqual(head([7]), 5);
+module.exports = head;
