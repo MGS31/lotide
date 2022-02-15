@@ -32,7 +32,7 @@ const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Re
 //   return array;
 // };
 
-const takeUntil1 = function(arr, fun) {
+const takeUntil = function(arr, fun) {
   // using a for loop against the length of the array.
   for (let i = 0; i < arr.length; i++) {
     // we can have a call back function equal a specific point we want to slice from.
@@ -42,6 +42,8 @@ const takeUntil1 = function(arr, fun) {
     }
   }
 };
+
+module.exports = takeUntil;
 
 console.log(takeUntil1(data1, n => n === -1));
 assertArraysEqual(takeUntil1(data2, n => n.length === 1), ["I've", "been", "to", "Hollywood"]);
