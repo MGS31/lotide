@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@mgs31/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lotide exericse",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/MGS31/lotide.git"
   },
-  "author": "",
+  "author": "MGS31",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MGS31/lotide/issues"

@@ -17,7 +17,9 @@ describe('#Tail', () => {
   it("returns [3,4,5] for [4,5,6,2,3] ", () => {
     assert.notDeepEqual(tail([4,5,6,2,3]), [3,4,5]);
   });
-  it("returns 3 for [1,2,3].length", () => {
-    assert.strictEqual([1,2,3].length, 3);
+  it("returns 3 for words.length, tail does not change the original array", () => {
+    const words = ["yo yo", "lighthouse", 'labs']
+    tail(words);
+    assert.strictEqual(words.length, 3);
   })
 });
