@@ -10,9 +10,9 @@
 const without = function (arr1, itemsToRemove) {
   // setting up a new array
   let newArr = [];
-  //filtering through with the lovely for of loop of each element of the first array.
+  //filtering through with the lovely for of loop of each item of the first array.
   for (const item of arr1) {
-    // if the items to remove doesn't include the element from arr1
+    // if the items to remove doesn't include the item from arr1
     if (!itemsToRemove.includes(item)) {
       // push the element to the new array.
       newArr.push(item);
