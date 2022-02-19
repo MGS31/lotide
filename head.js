@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const head = function(array) {
   // run a simple check to see if the ray is not a blank array
   if (array !== []) {

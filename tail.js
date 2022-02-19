@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const tail = (array) => {
   // simple variable checking for the array slicing the elements from the first index onward.
   const sum = array.slice(1);

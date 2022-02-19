@@ -1,4 +1,3 @@
-const assertEqual = require('./assertEqual');
 // @nosaoasis was so helpful in walking me through why the specific code from the reading exercise was working. That way I can read and understand exactly what I'm writing!
 
 

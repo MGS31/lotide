@@ -1,17 +1,7 @@
-const assertEqual = require('./assertEqual');
 // scan object with a for in loop
 // Loop should take into account both object and key value
 // should return the first key which contains the value
 // if no key is found it should return undefined
-
-// const findKeyByValueAlt = (object, value) => {
-//   Object.keys(object).forEach((key) => {
-//     if (object[key] === value) {
-//       return key;
-//     }
-//   });
-//   return undefined;
-// };
 
 //@webxteria helped me understand why my loop was breaking and I was able to refactor and complete the assisgnment.
 // he also showed me the Object.entries method to destructure an object and get its values more easily!
@@ -31,13 +21,3 @@ const findKeyByValue = function(object, value) {
 };
 
 module.exports = findKeyByValue;
-// const test = function(obj, val) {
-//   for (const [key, value] of Object.entries(obj)) {
-//     if (value === val) {
-//       return key;
-//     }
-//   }
-//   return undefined;
-// };
-
-// console.log(test(bestTVShowsByGenre, "The Wire"));

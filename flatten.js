@@ -1,7 +1,3 @@
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-
-
 // loop through nested array
 // compare each value of both main and neseted arrays
 // push only one instance of each value to a new array

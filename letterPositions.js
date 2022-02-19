@@ -1,6 +1,3 @@
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-
 // loop through the sentence
 // return each letter in the string as a key in the results object
 // for each key input an array that counts the indecs of the corrisponding key
